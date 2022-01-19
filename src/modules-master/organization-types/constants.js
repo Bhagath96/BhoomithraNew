@@ -1,0 +1,11 @@
+const STATE_REDUCER_KEY = 'organizationType';
+
+const REQUEST_STATUS = {
+    SUCCESS: 'SUCCESS',
+    FAILED: 'FAILED'
+};
+export { STATE_REDUCER_KEY, REQUEST_STATUS };
+
+export const TABLE_IDS = {
+    LIST_ORGANIZATION_TYPE: 'LIST_ORGANIZATION_TYPE'
+};

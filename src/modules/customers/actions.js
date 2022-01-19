@@ -1,0 +1,92 @@
+import { action } from '../../common';
+
+export const types = {
+    FETCH_CUSTOMER_DETAILS: 'Customers/FETCH_CUSTOMER_DETAILS',
+    FETCH_CUSTOMER_DETAILS_REQUEST: 'Customers/FETCH_CUSTOMER_DETAILS_REQUEST',
+    FETCH_CUSTOMER_DETAILS_SUCCESS: 'Customers/FETCH_CUSTOMER_DETAILS_SUCCESS',
+    FETCH_CUSTOMER_DETAILS_FAILURE: 'Customers/FETCH_CUSTOMER_DETAILS_FAILURE',
+
+    FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID: 'Customers/FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID',
+    FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID_REQUEST: 'Customers/FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID_REQUEST',
+    FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID_SUCCESS: 'Customers/FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID_SUCCESS',
+    FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID_FAILURE: 'Customers/FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID_FAILURE',
+
+    DELETE_CUSTOMER_DETAILS: 'Customers/DELETE_CUSTOMER_DETAILS',
+    DELETE_CUSTOMER_DETAILS_REQUEST: 'Customers/DELETE_CUSTOMER_DETAILS_REQUEST',
+    DELETE_CUSTOMER_DETAILS_SUCCESS: 'Customers/DELETE_CUSTOMER_DETAILS_SUCCESS',
+    DELETE_CUSTOMER_DETAILS_FAILURE: 'Customers/DELETE_CUSTOMER_DETAILS_FAILURE',
+
+    LIST_JSON_DATA: 'Customers/LIST_JSON_DATA',
+    LIST_JSON_DATA_REQUEST: 'Customers/LIST_JSON_DATA_REQUEST',
+    LIST_JSON_DATA_SUCCESS: 'Customers/LIST_JSON_DATA_SUCCESS',
+    LIST_JSON_DATA_FAILURE: 'Customers/LIST_JSON_DATA_FAILURE',
+
+    SET_FILTER: 'Customers/SET_FILTER',
+    RESET_FILTER: 'Customers/RESET_FILTER',
+    STORE_JSON_DATA: 'Customers/STORE_JSON_DATA',
+
+    FETCH_ALL_SUBSCRIPTIONS: 'Customers/FETCH_ALL_SUBSCRIPTIONS',
+    FETCH_ALL_SUBSCRIPTIONS_REQUEST: 'Customers/FETCH_ALL_SUBSCRIPTIONS_REQUEST',
+    FETCH_ALL_SUBSCRIPTIONS_SUCCESS: 'Customers/FETCH_ALL_SUBSCRIPTIONS_SUCCESS',
+    FETCH_ALL_SUBSCRIPTIONS_FAILURE: 'Customers/FETCH_ALL_SUBSCRIPTIONS_FAILURE',
+
+    PROCESS_SUBSCRIPTION: 'Customers/PROCESS_SUBSCRIPTION',
+    PROCESS_SUBSCRIPTION_REQUEST: 'Customers/PROCESS_SUBSCRIPTION_REQUEST',
+    PROCESS_SUBSCRIPTION_SUCCESS: 'Customers/PROCESS_SUBSCRIPTION_SUCCESS',
+    PROCESS_SUBSCRIPTION_FAILURE: 'Customers/PROCESS_SUBSCRIPTION_FAILURE',
+
+    LIST_JSON_DATA_FOR_SUBSCRIPTION: 'Customers/LIST_JSON_DATA_FOR_SUBSCRIPTION',
+    LIST_JSON_DATA_FOR_SUBSCRIPTION_REQUEST: 'Customers/LIST_JSON_DATA_FOR_SUBSCRIPTION_REQUEST',
+    LIST_JSON_DATA_FOR_SUBSCRIPTION_SUCCESS: 'Customers/LIST_JSON_DATA_FOR_SUBSCRIPTION_SUCCESS',
+    LIST_JSON_DATA_FOR_SUBSCRIPTION_FAILURE: 'Customers/LIST_JSON_DATA_FOR_SUBSCRIPTION_FAILURE',
+
+    SET_FILTER_FOR_SUBSCRIPTION: 'Customers/SET_FILTER_FOR_SUBSCRIPTION',
+    RESET_FILTER_FOR_SUBSCRIPTION: 'Customers/RESET_FILTER_FOR_SUBSCRIPTION',
+    STORE_JSON_DATA_FOR_SUBSCRIPTION: 'Customers/STORE_JSON_DATA_FOR_SUBSCRIPTION',
+    SET_FILTER_FROM_INITIAL_STATE: 'Customers/SET_FILTER_FROM_INITIAL_STATE',
+
+    EDIT_CUSTOMER_DETAILS: 'Customers/EDIT_CUSTOMER_DETAILS',
+    CUSTOMER_SERVICE_ENROLLMENT_DETAILS: 'Customers/CUSTOMER_SERVICE_ENROLLMENT_DETAILS',
+    CUSTOMER_QR_ENROLLMENT_DETAILS: 'Customers/CUSTOMER_QR_ENROLLMENT_DETAILS',
+
+    ASSIGN_SERVICE_WORKER: 'Customers/ASSIGN_SERVICE_WORKER',
+    ASSIGN_SERVICE_WORKER_REQUEST: 'Customers/ASSIGN_SERVICE_WORKER_REQUEST',
+    ASSIGN_SERVICE_WORKER_SUCCESS: 'Customers/ASSIGN_SERVICE_WORKER_SUCCESS',
+    ASSIGN_SERVICE_WORKER_FAILURE: 'Customers/ASSIGN_SERVICE_WORKER_FAILURE',
+
+    RESET_FILTER_DROP_DOWN: 'Customers/RESET_FILTER_DROP_DOWN'
+
+};
+
+export const fetchCustomerDetails = (data) => action(types.FETCH_CUSTOMER_DETAILS, { data });
+
+export const resetTableDropdownFilterListForCustomers = () => action(types.RESET_FILTER_DROP_DOWN, {});
+
+export const fetchCustomerDetailsBySurveyId = (data) => action(types.FETCH_CUSTOMER_DETAILS_BY_SURVEY_ID, { data });
+
+export const deleteCustomerDetails = (data) => action(types.DELETE_CUSTOMER_DETAILS, { data });
+
+export const setFilter = (data) => action(types.SET_FILTER, { data });
+
+export const resetFilter = () => action(types.RESET_FILTER);
+
+export const listJsonData = (data) => action(types.LIST_JSON_DATA, { data });
+
+export const storeJsonData = (data) => action(types.STORE_JSON_DATA, { data });
+
+export const fetchAllSubscriptions = (data) => action(types.FETCH_ALL_SUBSCRIPTIONS, { data });
+
+export const processSubscriptionRequest = (data) => action(types.PROCESS_SUBSCRIPTION, { data });
+
+export const setFilterSubscription = (data) => action(types.SET_FILTER_FOR_SUBSCRIPTION, { data });
+export const resetFilterSubscription = () => action(types.RESET_FILTER_FOR_SUBSCRIPTION);
+export const listJsonDataForSubscription = (searchValue, searchKey, columnName) => action(types.LIST_JSON_DATA_FOR_SUBSCRIPTION, { searchValue, searchKey, columnName });
+export const storeJsonDataForSubscription = (data) => action(types.STORE_JSON_DATA_FOR_SUBSCRIPTION, { data });
+export const setFilterValuesFromInitialStates = () => action(types.SET_FILTER_FROM_INITIAL_STATE);
+
+export const editCustomerDetails = (data) => action(types.EDIT_CUSTOMER_DETAILS, { data });
+export const customerServiceEnrollmentDetails = (data) => action(types.CUSTOMER_SERVICE_ENROLLMENT_DETAILS, { data });
+export const customerQREnrollmentDetails = (data) => action(types.CUSTOMER_QR_ENROLLMENT_DETAILS, { data });
+
+export const assignSpecialServiceRequestsServiceWorker = (data) => action(types.ASSIGN_SERVICE_WORKER, { data });
+

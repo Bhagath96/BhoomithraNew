@@ -1,0 +1,49 @@
+import { action } from '../../common';
+
+export const types = {
+    LIST_BUILDING_TYPE: 'ServiceCategory/LIST_BUILDING_TYPE',
+    LIST_BUILDING_TYPE_REQUEST: 'ServiceCategory/LIST_BUILDING_TYPE_REQUEST',
+    LIST_BUILDING_TYPE_SUCCESS: 'ServiceCategory/LIST_BUILDING_TYPE_SUCCESS',
+    LIST_BUILDING_TYPE_FAILURE: 'ServiceCategory/LIST_BUILDING_TYPE_FAILURE',
+
+    SENT_BUILDING_TYPE: 'ServiceCategory/SENT_BUILDING_TYPE',
+    SENT_BUILDING_TYPE_REQUEST: 'ServiceCategory/SENT_BUILDING_TYPE_REQUEST',
+    SENT_BUILDING_TYPE_SUCCESS: 'ServiceCategory/SENT_BUILDING_TYPE_SUCCESS',
+    SENT_BUILDING_TYPE_FAILURE: 'ServiceCategory/SENT_BUILDING_TYPE_FAILURE',
+
+    EDIT_BUILDING_TYPE: 'ServiceCategory/EDIT_BUILDING_TYPE',
+    EDIT_BUILDING_TYPE_REQUEST: 'ServiceCategory/EDIT_BUILDING_TYPE_REQUEST',
+    EDIT_BUILDING_TYPE_SUCCESS: 'ServiceCategory/EDIT_BUILDING_TYPE_SUCCESS',
+    EDIT_BUILDING_TYPE_FAILURE: 'ServiceCategory/EDIT_BUILDING_TYPE_FAILURE',
+
+    GET_BUILDING_TYPE_BY_ID: 'ServiceCategory/GET_BUILDING_TYPE_BY_ID',
+    GET_BUILDING_TYPE_BY_ID_REQUEST: 'ServiceCategory/GET_BUILDING_TYPE_BY_ID_REQUEST',
+    GET_BUILDING_TYPE_BY_ID_SUCCESS: 'ServiceCategory/GET_BUILDING_TYPE_BY_ID_SUCCESS',
+    GET_BUILDING_TYPE_BY_ID_FAILURE: 'ServiceCategory/GET_BUILDING_TYPE_BY_ID_FAILRUE',
+    DELETE_BUILDING_TYPE: 'ServiceCategory/DELETE_BUILDING_TYPE',
+    DELETE_BUILDING_TYPE_REQUEST: 'ServiceCategory/DELETE_BUILDING_TYPE_REQUEST',
+    DELETE_BUILDING_TYPE_SUCCESS: 'ServiceCategory/DELETE_BUILDING_TYPE_SUCCESS',
+    DELETE_BUILDING_TYPE_FAILURE: 'ServiceCategory/DELETE_BUILDING_TYPE_FAILURE',
+    RESET_SERVICE_FORM: 'ServiceCategory/RESET_SERVICE_FORM',
+
+    LOAD_RESIDENTIAL_CATEGORY: 'ServiceCategory/LOAD_RESIDENTIAL_CATEGORY',
+    LOAD_RESIDENTIAL_CATEGORY_REQUEST: 'ServiceCategory/LOAD_RESIDENTIAL_CATEGORY_REQUEST',
+    LOAD_RESIDENTIAL_CATEGORY_SUCCESS: 'ServiceCategory/LOAD_RESIDENTIAL_CATEGORY_SUCCESS',
+    LOAD_RESIDENTIAL_CATEGORY_FAILURE: 'ServiceCategory/LOAD_RESIDENTIAL_CATEGORY_FAILURE'
+
+
+};
+
+export const listBuildingType = (data) => action(types.LIST_BUILDING_TYPE, { data });
+export const sentBuildingType = (data) => action(types.SENT_BUILDING_TYPE, { data });
+export const editBuildingType = (id, data) => action(types.EDIT_BUILDING_TYPE, { id, data });
+
+
+export const getBuildingTypeById = (id) => action(types.GET_BUILDING_TYPE_BY_ID, { id });
+
+export const deleteBuildingType = (data, page, size, count) => action(types.DELETE_BUILDING_TYPE, { data, page, size, count });
+
+export const resetBuildingTypeForm = () => action(types.RESET_SERVICE_FORM);
+export const loadResidentialCategories = () => action(types.LOAD_RESIDENTIAL_CATEGORY);
+
+

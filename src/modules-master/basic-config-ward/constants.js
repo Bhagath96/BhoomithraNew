@@ -1,0 +1,9 @@
+export const STATE_REDUCER_KEY = 'wards';
+export const TABLE_IDS = {
+    LIST_WARD: 'LIST_WARD',
+    LIST_RESIDENTIAL_ASSOCIATION: 'LIST_RESIDENTIAL_ASSOCIATION'
+};
+export const REQUEST_STATUS = {
+    SUCCESS: 'SUCCESS',
+    FAILED: 'FAILED'
+};

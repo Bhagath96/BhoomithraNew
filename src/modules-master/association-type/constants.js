@@ -1,0 +1,11 @@
+const STATE_REDUCER_KEY = 'associationType';
+
+const REQUEST_STATUS = {
+    SUCCESS: 'SUCCESS',
+    FAILED: 'FAILED'
+};
+export { STATE_REDUCER_KEY, REQUEST_STATUS };
+
+export const TABLE_IDS = {
+    LIST_ASSOCIATION_TYPE: 'LIST_ASSOCIATION_TYPE'
+};

@@ -1,0 +1,11 @@
+const STATE_REDUCER_KEY = 'forgotPassword';
+
+const REQUEST_STATUS = {
+    SUCCESS: 'SUCCESS',
+    FAILED: 'FAILED'
+};
+
+const OPT_TIMER = 120000;
+
+export { STATE_REDUCER_KEY, REQUEST_STATUS, OPT_TIMER };
+

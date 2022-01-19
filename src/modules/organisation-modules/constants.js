@@ -1,0 +1,8 @@
+const STATE_REDUCER_KEY = 'module';
+
+const REQUEST_STATUS = {
+    SUCCESS: 'SUCCESS',
+    FAILED: 'FAILED'
+};
+
+export { STATE_REDUCER_KEY, REQUEST_STATUS };

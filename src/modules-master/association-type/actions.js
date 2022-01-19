@@ -1,0 +1,42 @@
+import { action } from '../../common';
+
+export const types = {
+    LIST_ASSOCIATION_TYPE: 'AssociationType/LIST_ASSOCIATION_TYPE',
+    LIST_ASSOCIATION_TYPE_REQUEST: 'AssociationType/LIST_ASSOCIATION_TYPE_REQUEST',
+    LIST_ASSOCIATION_TYPE_SUCCESS: 'AssociationType/LIST_ASSOCIATION_TYPE_SUCCESS',
+    LIST_ASSOCIATION_TYPE_FAILURE: 'AssociationType/LIST_ASSOCIATION_TYPE_FAILURE',
+
+    SENT_ASSOCIATION_TYPE: 'AssociationType/SENT_ASSOCIATION_TYPE',
+    SENT_ASSOCIATION_TYPE_REQUEST: 'AssociationType/SENT_ASSOCIATION_TYPE_REQUEST',
+    SENT_ASSOCIATION_TYPE_SUCCESS: 'AssociationType/SENT_ASSOCIATION_TYPE_SUCCESS',
+    SENT_ASSOCIATION_TYPE_FAILURE: 'AssociationType/SENT_ASSOCIATION_TYPE_FAILURE',
+
+    EDIT_ASSOCIATION_TYPE: 'AssociationType/EDIT_ASSOCIATION_TYPE',
+    EDIT_ASSOCIATION_TYPE_REQUEST: 'AssociationType/EDIT_ASSOCIATION_TYPE_REQUEST',
+    EDIT_ASSOCIATION_TYPE_SUCCESS: 'AssociationType/EDIT_ASSOCIATION_TYPE_SUCCESS',
+    EDIT_ASSOCIATION_TYPE_FAILURE: 'AssociationType/EDIT_ASSOCIATION_TYPE_FAILURE',
+
+    GET_ASSOCIATION_TYPE_BY_ID: 'AssociationType/GET_ASSOCIATION_TYPE_BY_ID',
+    GET_ASSOCIATION_TYPE_BY_ID_REQUEST: 'AssociationType/GET_ASSOCIATION_TYPE_BY_ID_REQUEST',
+    GET_ASSOCIATION_TYPE_BY_ID_SUCCESS: 'AssociationType/GET_ASSOCIATION_TYPE_BY_ID_SUCCESS',
+    GET_ASSOCIATION_TYPE_BY_ID_FAILURE: 'AssociationType/GET_ASSOCIATION_TYPE_BY_ID_FAILRUE',
+    DELETE_ASSOCIATION_TYPE: 'AssociationType/DELETE_ASSOCIATION_TYPE',
+    DELETE_ASSOCIATION_TYPE_REQUEST: 'AssociationType/DELETE_ASSOCIATION_TYPE_REQUEST',
+    DELETE_ASSOCIATION_TYPE_SUCCESS: 'AssociationType/DELETE_ASSOCIATION_TYPE_SUCCESS',
+    DELETE_ASSOCIATION_TYPE_FAILURE: 'AssociationType/DELETE_ASSOCIATION_TYPE_FAILURE',
+    RESET_SERVICE_FORM: 'AssociationType/RESET_SERVICE_FORM'
+
+};
+
+export const listAssociationType = (data) => action(types.LIST_ASSOCIATION_TYPE, { data });
+
+export const sentAssociationType = (data) => action(types.SENT_ASSOCIATION_TYPE, { data });
+export const editAssociationType = (id, data) => action(types.EDIT_ASSOCIATION_TYPE, { id, data });
+
+
+export const getAssociationTypeById = (id) => action(types.GET_ASSOCIATION_TYPE_BY_ID, { id });
+
+export const deleteAssociationType = (data, page, size, count) => action(types.DELETE_ASSOCIATION_TYPE, { data, page, size, count });
+
+export const resetAssociationTypeForm = () => action(types.RESET_SERVICE_FORM);
+

@@ -1,0 +1,49 @@
+import ORGANIZATION from './Organization';
+import QUESTION from './Question';
+import TITLE from './Title';
+import FRAGMENT from './Fragment';
+import TEMPLATE from './Template';
+import SCHEDULE from './Schedule';
+import USER from './User';
+import USER_GROUP from './UserGroup';
+import ROLES from './Roles';
+import OTHERS from './Others';
+import DASHBOARD from './Dashboard';
+import REPORT from './Report';
+import VEHICLE_TRACKING from './VehicleTracking';
+
+import * as OLD_PERMISSIONS from './oldPermissions';
+
+export const RESOURCE_MAPPING = {
+    ...OLD_PERMISSIONS.RESOURCE_MAPPING,
+    ...DASHBOARD.RESOURCE_MAPPING,
+    ...ORGANIZATION.RESOURCE_MAPPING,
+    ...QUESTION.RESOURCE_MAPPING,
+    ...TITLE.RESOURCE_MAPPING,
+    ...FRAGMENT.RESOURCE_MAPPING,
+    ...TEMPLATE.RESOURCE_MAPPING,
+    ...SCHEDULE.RESOURCE_MAPPING,
+    ...USER.RESOURCE_MAPPING,
+    ...USER_GROUP.RESOURCE_MAPPING,
+    ...ROLES.RESOURCE_MAPPING,
+    ...OTHERS.RESOURCE_MAPPING,
+    ...REPORT.RESOURCE_MAPPING,
+    ...VEHICLE_TRACKING.RESOURCE_MAPPING
+};
+
+export const ACTION_MAPPING = {
+    ...OLD_PERMISSIONS.ACTION_MAPPING,
+    ...DASHBOARD.ACTION_MAPPING,
+    ...ORGANIZATION.ACTION_MAPPING,
+    ...QUESTION.ACTION_MAPPING,
+    ...TITLE.ACTION_MAPPING,
+    ...FRAGMENT.ACTION_MAPPING,
+    ...TEMPLATE.ACTION_MAPPING,
+    ...SCHEDULE.ACTION_MAPPING,
+    ...USER.ACTION_MAPPING,
+    ...USER_GROUP.ACTION_MAPPING,
+    ...ROLES.ACTION_MAPPING,
+    ...OTHERS.ACTION_MAPPING,
+    ...REPORT.ACTION_MAPPING,
+    ...VEHICLE_TRACKING.ACTION_MAPPING
+};
